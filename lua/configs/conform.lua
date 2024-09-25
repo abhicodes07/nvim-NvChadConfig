@@ -3,7 +3,8 @@ local options = {
     lua = { "stylua" },
     css = { "prettier" },
     html = { "prettier" },
-  },
+    python = { "pyright" },
+  }, 
 
   -- format_on_save = {
   --   -- These options will be passed to conform.format()

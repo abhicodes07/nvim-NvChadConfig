@@ -5,7 +5,7 @@ local on_init = require("nvchad.configs.lspconfig").on_init
 local capabilities = require("nvchad.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
-local servers = { "html", "cssls", "ruff"}
+local servers = { "html", "cssls", "ruff", "lua-language-server", "java-language-server"}
 -- local servers1 = {"ruff"}
 
 -- local null_ls = require('null-ls')
@@ -92,4 +92,15 @@ lspconfig.jedi_language_server.setup{
     buf_set_keymap('n', '<space>q', '<Cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
     buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
   end,
+}
+
+-- typescript server
+lspconfig.tsserver.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  init_options = {
+    preferences = {
+      disableSuggestios = true,
+    }
+  }
 }

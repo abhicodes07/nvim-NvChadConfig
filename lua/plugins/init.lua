@@ -17,6 +17,14 @@ return {
     end,
   },
 
+  {
+    "mfussenegger/nvim-lint",
+    event = "VeryLazy",
+    config = function ()
+      require "configs.lint"
+    end
+  },
+
   -- These are some examples, uncomment them if you want to see them work!
    {
      "neovim/nvim-lspconfig",
@@ -31,8 +39,9 @@ return {
    	opts = {
    		ensure_installed = {
    			"lua-language-server", "stylua",
-   			"html-lsp", "css-lsp" , "prettier", 
-        "clangd", "pyright", "black", "python-lsp-server"},
+   			"html-lsp", "css-lsp" , "prettier",
+        "clangd", "pyright", "black", "python-lsp-server", "typescript-language-server",
+        "java-language-server", "eslint-lsp"},
    	},
    },
   --

@@ -7,7 +7,7 @@ local M = {}
 -- set relativenumber;
 
 M.ui = {
-	theme = "tokyodark",
+	theme = "chadracula-evondev",
 
 	 hl_override = {
 	 	Comment = { italic = true },
